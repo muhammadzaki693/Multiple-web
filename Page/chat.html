@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <!-- script-->
+    <script type="text/javascript">
+    function fn1(){
+      var str = document.getElementById("text1").value;
+      
+      if (str === "halo"){
+        document.getElementsByTagName("h4")[0].innerText = "halo"
+      } else {
+        document.getElementsByTagName("h4")[0].innerText = "whats?"
+      }
+    }
+    </script>
+    <!-- import the webpage's javascript file -->
+    <script src="../script.js" defer></script>
+  </head>  
+  <body>
+    <a href="../index.html">back</a>
+    <h1>Hi there!</h1>
+    
+    <p>
+      make by <a href="https://glitch.com">Glitch</a> and i custom to can chat with bot
+    </p>
+    
+    <input id="text1" placeholder="your text">
+    <br>
+    <button onclick="fn1()" id="btn1">enter</button>
+    
+    <h4></h4>
+    
+    <p>this is for <a href="Math.html">math</a></p>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>

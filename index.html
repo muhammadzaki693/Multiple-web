@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <!--me css-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--me js-->
+    <script src="script.js"></script>
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="code-area">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      navigation
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Page
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="index.html">code editor</a></li>
+            <li><a class="dropdown-item" href="Page/Math.html">math</a></li>
+            <li><a class="dropdown-item" href="Page/chat.html">chatbot</a></li>
+            <li class="nav-item">
+          <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">developer only</a>
+        </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <textarea id="htmlCode" placeholder="html" 
+            oninput="showPreview()"></textarea>
+  <textarea id="cssCode" placeholder="css" 
+            oninput="showPreview()"></textarea>
+  <textarea id="jsCode" placeholder="JavaScript" 
+            oninput="showPreview()"></textarea>				
+</div>
+<div class="preview-area">
+  <iframe id="preview-window"></iframe>
+</div>
+<script>
+  function showPreview(){
+  var htmlCode = document.getElementById("htmlCode").value;
+  var cssCode = "<style>"+document.getElementById("cssCode").value+"</style>";
+  
+  var jsCode = "<script"+document.getElementById("jsCode").value+"</script"+">";
+  var frame = document.getElementById("preview-window").contentWindow.document;
+  
+  frame.open();
+  frame.write(htmlCode+cssCode+jsCode);
+  frame.close();
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
