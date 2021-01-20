@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello!</title>
+    <title>chatbot</title>
     
     <!-- import the webpage's stylesheet -->
     <!-- script-->
     <script type="text/javascript">
     function fn1(){
       var str = document.getElementById("text1").value;
+      var know = {
+        "halo": "halo human"
+      }
       
-      if (str === "halo"){
-        document.getElementsByTagName("h4")[0].innerText = "halo"
+      if (str in know){
+        document.getElementsByTagName("h4")[0].innerText = know[str]
       } else {
         document.getElementsByTagName("h4")[0].innerText = "whats?"
       }
@@ -34,7 +37,7 @@
     <input id="text1" placeholder="your text">
     <br>
     <button onclick="fn1()" id="btn1">enter</button>
-    
+    <br>
     <h4></h4>
     
     <p>this is for <a href="Math.html">math</a></p>
