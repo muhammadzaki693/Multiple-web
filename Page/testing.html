@@ -20,6 +20,58 @@
       <input type="radio" class="code editor">pycharm<br>
       <input type="radio" class="code editor">atom<br>
       <input type="radio" class="code editor">etc<br>
+      <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+  eruda.init();
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-fps"></script>
+<script>
+  eruda.add(erudaFps)
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-code"></script>
+<script>
+  eruda.add(erudaCode)
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-benchmark"></script>
+<script>
+      eruda.add(erudaBenchmark)
+</script>
+<script>
+      var benchmark = eruda.get('benchmark')
+
+      benchmark.add('Test', function() {
+        var arr = new Array(10000)
+        for (var i = 0; i < 10000; i++) arr[i] = i * 2
+      })
+      benchmark.add('Test Suite', [
+        {
+          name: 'RegExp#test',
+          fn: function() {
+            ;/o/.test('Hello World!')
+          }
+        },
+        {
+          name: 'String#indexOf',
+          fn: function() {
+            'Hello World!'.indexOf('o') > -1
+          }
+        },
+        {
+          name: 'String#match',
+          fn: function() {
+            !!'Hello World!'.match(/o/)
+          }
+        }
+      ])
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-orientation"></script>
+<script>
+  eruda.add(erudaOrientation)
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-touches"></script>
+<script>
+  eruda.add(erudaTouches)
+</script>
     </form>
   </body>
 </html>

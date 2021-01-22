@@ -46,7 +46,6 @@
             <li class="nav-item">
           <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">developer only</a>
         </li>
-        <li><a class="dropdown-item" href="Page/tictactoe.html">tictactoe</a></li>
             <li class="nav-item">
           </ul>
         </li>
@@ -76,6 +75,58 @@
   frame.write(htmlCode+cssCode+jsCode);
   frame.close();
 }
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+  eruda.init();
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-fps"></script>
+<script>
+  eruda.add(erudaFps)
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-code"></script>
+<script>
+  eruda.add(erudaCode)
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-benchmark"></script>
+<script>
+      eruda.add(erudaBenchmark)
+</script>
+<script>
+      var benchmark = eruda.get('benchmark')
+
+      benchmark.add('Test', function() {
+        var arr = new Array(10000)
+        for (var i = 0; i < 10000; i++) arr[i] = i * 2
+      })
+      benchmark.add('Test Suite', [
+        {
+          name: 'RegExp#test',
+          fn: function() {
+            ;/o/.test('Hello World!')
+          }
+        },
+        {
+          name: 'String#indexOf',
+          fn: function() {
+            'Hello World!'.indexOf('o') > -1
+          }
+        },
+        {
+          name: 'String#match',
+          fn: function() {
+            !!'Hello World!'.match(/o/)
+          }
+        }
+      ])
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-orientation"></script>
+<script>
+  eruda.add(erudaOrientation)
+</script>
+<script src="//cdn.jsdelivr.net/npm/eruda-touches"></script>
+<script>
+  eruda.add(erudaTouches)
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
