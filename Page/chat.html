@@ -27,7 +27,6 @@
     <script src="../script.js" defer></script>
   </head>  
   <body>
-    <a href="../index.html">back</a>
     <h1>Hi there!</h1>
     
     <p>
@@ -39,63 +38,9 @@
     <button onclick="fn1()" id="btn1">enter</button>
     <br>
     <h4></h4>
-    
-    <p>this is for <a href="Math.html">math</a></p>
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
     <script src="https://button.glitch.me/button.js" defer></script>
-    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>
-  eruda.init();
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-fps"></script>
-<script>
-  eruda.add(erudaFps)
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-code"></script>
-<script>
-  eruda.add(erudaCode)
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-benchmark"></script>
-<script>
-      eruda.add(erudaBenchmark)
-</script>
-<script>
-      var benchmark = eruda.get('benchmark')
-
-      benchmark.add('Test', function() {
-        var arr = new Array(10000)
-        for (var i = 0; i < 10000; i++) arr[i] = i * 2
-      })
-      benchmark.add('Test Suite', [
-        {
-          name: 'RegExp#test',
-          fn: function() {
-            ;/o/.test('Hello World!')
-          }
-        },
-        {
-          name: 'String#indexOf',
-          fn: function() {
-            'Hello World!'.indexOf('o') > -1
-          }
-        },
-        {
-          name: 'String#match',
-          fn: function() {
-            !!'Hello World!'.match(/o/)
-          }
-        }
-      ])
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-orientation"></script>
-<script>
-  eruda.add(erudaOrientation)
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-touches"></script>
-<script>
-  eruda.add(erudaTouches)
-</script>
   </body>
 </html>

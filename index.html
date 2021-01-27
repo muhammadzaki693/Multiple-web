@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <!--me css-->
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <!--me js-->
     <script src="script.js"></script>
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   </head>
   <body>
-    <div class="code-area">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -35,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link" href="https://email-form.muhammadzakirha.repl.co">email</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" aria-disabled="true" id="developer">dashboard</a>
+           </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Page
@@ -45,88 +45,45 @@
             <li><a class="dropdown-item" href="Page/chat.html">chatbot</a></li>
             <li class="nav-item">
           <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">developer only</a>
-        </li>
-            <li class="nav-item">
+           </li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-  <textarea id="htmlCode" placeholder="html" 
-            oninput="showPreview()"></textarea>
-  <textarea id="cssCode" placeholder="css" 
-            oninput="showPreview()"></textarea>
-  <textarea id="jsCode" placeholder="JavaScript" 
-            oninput="showPreview()"></textarea>				
-</div>
-<div class="preview-area">
-  <iframe id="preview-window"></iframe>
-</div>
+<a href="Page/Code.editor.html">code editor</a>
+<iframe src="Page/Code.editor.html" height="500" width="500"></iframe>
+<a href="Page/chat.html">chatbot</a>
+<iframe src="Page/chat.html" height="500" width="500"></iframe>
+<a href="Page/Math.html">math</a>
+<iframe src="Page/Math.html" height="500" width="500"></iframe>
 <script>
-  function showPreview(){
-  var htmlCode = document.getElementById("htmlCode").value;
-  var cssCode = "<style>"+document.getElementById("cssCode").value+"</style>";
-  
-  var jsCode = "<script>"+document.getElementById("jsCode").value+"</script"+">";
-  var frame = document.getElementById("preview-window").contentWindow.document;
-  
-  frame.open();
-  frame.write(htmlCode+cssCode+jsCode);
-  frame.close();
-}
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>
-  eruda.init();
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-fps"></script>
-<script>
-  eruda.add(erudaFps)
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-code"></script>
-<script>
-  eruda.add(erudaCode)
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-benchmark"></script>
-<script>
-      eruda.add(erudaBenchmark)
-</script>
-<script>
-      var benchmark = eruda.get('benchmark')
-
-      benchmark.add('Test', function() {
-        var arr = new Array(10000)
-        for (var i = 0; i < 10000; i++) arr[i] = i * 2
-      })
-      benchmark.add('Test Suite', [
-        {
-          name: 'RegExp#test',
-          fn: function() {
-            ;/o/.test('Hello World!')
-          }
-        },
-        {
-          name: 'String#indexOf',
-          fn: function() {
-            'Hello World!'.indexOf('o') > -1
-          }
-        },
-        {
-          name: 'String#match',
-          fn: function() {
-            !!'Hello World!'.match(/o/)
-          }
-        }
-      ])
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-orientation"></script>
-<script>
-  eruda.add(erudaOrientation)
-</script>
-<script src="//cdn.jsdelivr.net/npm/eruda-touches"></script>
-<script>
-  eruda.add(erudaTouches)
+  ;(function () {
+    var src = '//cdn.jsdelivr.net/npm/eruda';
+    var eruda_scr_benchmark = '//cdn.jsdelivr.net/npm/eruda-benchmark';
+    var eruda_src_touches = '//cdn.jsdelivr.net/npm/eruda-touches';
+    var eruda_src_fps = '//cdn.jsdelivr.net/npm/eruda-fps';
+    var eruda_src_code = '//cdn.jsdelivr.net/npm/eruda-code';
+    var eruda_src_orientation = '//cdn.jsdelivr.net/npm/eruda-orientation';
+    var eruda_src_geolocation = '//cdn.jsdelivr.net/npm/eruda-geolocation';
+    if (!/developer=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+    document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
+    document.write('<scr' + 'ipt src="' + eruda_scr_benchmark + '"></scr' + 'ipt>');
+    document.write('<scr' + 'ipt>eruda.add(erudaBenchmark)</scr' + 'ipt>');
+    document.write('<scr'+'ipt src="'+eruda_src_touches+'">'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt>'+'eruda.add(erudaTouches)'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt src="'+eruda_src_fps+'">'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt>'+'eruda.add(erudaFps)'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt src="'+eruda_src_code+'">'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt>'+'eruda.add(erudaCode)'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt src="'+eruda_src_orientation+'">'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt>'+'eruda.add(erudaOrientation)'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt src="'+eruda_src_geolocation+'">'+'</scr'+'ipt>')
+    document.write('<scr'+'ipt>'+'eruda.add(erudaGeolocation)'+'</scr'+'ipt>')
+    document.getElementById("developer").innerHtml = '<a class="nav-link" href="dashboard.html">email</a>';
+  })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
