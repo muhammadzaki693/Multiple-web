@@ -7,27 +7,13 @@
   <body>
     <noscript>your browser is not support javascript or other</noscript>
     <button onclick="show()">show date</button>
-    <p></p>
+    <p>year month day hour:minutes:second:milisecond</p>
     <script>
       function show(){
         var d = new Date();
-        var day = d.getDay();
-        switch(day){
-          case 0:
-            document.getElementsByTagName("p")[0].innerText = "minggu";
-          case 1:
-            document.getElementsByTagName("p")[0].innerText = "senin";
-          case 2:
-            document.getElementsByTagName("p")[0].innerText = "selasa";
-          case 3:
-            document.getElementsByTagName("p")[0].innerText = "rabu";
-          case 4:
-            document.getElementsByTagName("p")[0].innerText = "kamis";
-          case 5:
-            document.getElementsByTagName("p")[0].innerText = "jumat";
-          case 6:
-            document.getElementsByTagName("p")[0].innerText = "sabtu";
-        }
+        var day = ["minggu","senin","selasa","rabu","kamis","jumat","sabtu"];
+        var month = ["january","februari","maret","april","mei","juni","juli","agustus","septembet","oktober","november","desember"];
+        document.getElementsByTagName("p")[0].innerText = d.getFullYear()+" "+month[d.getMonth()]+" "+day[d.getDay()]+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds();
       }
     </script>
   </body>
