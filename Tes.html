@@ -10,23 +10,30 @@
     <script>
       function btn(){
         var date = new Date();
-        var day = date.getDay();
-        switch(day) {
+        let day
+        switch (new Date().getDay()) {
           case 0:
-            document.getElementsByTagName("p")[0].innerText = "minggu";
+            day = "Sunday";
+            break;
           case 1:
-            document.getElementsByTagName("p")[0].innerText = "senin";
+            day = "Monday";
+            break;
           case 2:
-            document.getElementsByTagName("p")[0].innerText = "selasa";
+            day = "Tuesday";
+            break;
           case 3:
-            document.getElementsByTagName("p")[0].innerText = "rabu";
+            day = "Wednesday";
+            break;
           case 4:
-            document.getElementsByTagName("p")[0].innerText = "kamis";
+            day = "Thursday";
+            break;
           case 5:
-            document.getElementsByTagName("p")[0].innerText = "jumat";
+            day = "Friday";
+            break;
           case 6:
-            document.getElementsByTagName("p")[0].innerText = "sabtu";
+            day = "Saturday";
         }
+        document.getElementsByTagName("p")[0].innerText = day
       }
     </script>
   </body>

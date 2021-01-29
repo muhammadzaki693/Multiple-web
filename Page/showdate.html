@@ -11,9 +11,25 @@
     <script>
       function show(){
         var d = new Date();
-        var day = ["minggu","senin","selasa","rabu","kamis","jumat","sabtu"];
-        var month = ["january","februari","maret","april","mei","juni","juli","agustus","septembet","oktober","november","desember"];
-        document.getElementsByTagName("p")[0].innerText = d.getFullYear()+" "+month[d.getMonth()]+" "+day[d.getDay()]+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds();
+        let day;
+        let month
+        switch (new Date().getDay()) {
+          case 0:
+            day = "minggu"
+          case 1:
+            day = "senin"
+          case 2:
+            day = "selasa"
+          case 3:
+            day = "rabu"
+          case 4:
+            day = "kamis"
+          case 5:
+            day = "jumat"
+          case 6:
+            day = "sabtu"
+        }
+        document.getElementsByTagName("p")[0].innerText = day
       }
     </script>
   </body>
