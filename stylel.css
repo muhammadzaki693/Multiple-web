@@ -1,5 +1,8 @@
-div#property {
+#property {
   color: rgb(0, 136, 255);
   background-color: black;
   border-color: red;
+}
+p {
+  color: rgb(0, 136, 155);
 }
