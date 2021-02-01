@@ -6,73 +6,70 @@
   </head>
   <body>
     <noscript>your browser is not support javascript or other</noscript>
-    <button onclick="show()">show date</button>
     <p>year month day hour:minutes:second:milisecond</p>
     <script>
-      function show(){
-        var d = new Date();
-        let day;
-        let month
-        switch (new Date().getDay()) {
-          case 0:
-            day = "minggu";
-            break;
-          case 1:
-            day = "senim";
-            break;
-          case 2:
-            day = "selasa";
-            break;
-          case 3:
-            day = "rabu";
-            break;
-          case 4:
-            day = "kamis";
-            break;
-          case 5:
-            day = "jumat";
-            break;
-          case 6:
-            day = "sabtu";
-            break;
-        }
-        switch (new Date().getMonth()) {
-          case 0:
-            month = "january";
-            break;
-          case 1:
-            month = "februari";
-            break;
-          case 2:
-            month = "maret";
-            break;
-          case 3:
-            month = "april";
-            break;
-          case 4:
-            month = "juni";
-            break;
-          case 5:
-            month = "juli";
-            break;
-          case 6:
-            month = "agustus";
-            break;
-          case 7:
-            month = "september";
-            break;
-          case 8:
-            month = "oktober";
-            break;
-          case 9:
-            month = "november";
-            break;
-          case 10:
-            month = "december";
-            break;
-        }
-        document.getElementsByTagName("p")[0].innerText = d.getFullYear()+" "+month+" "+day+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds();
+      var d = new Date();
+      let day;
+      let month
+      switch (new Date().getDay()) {
+        case 0:
+          day = "minggu";
+          break;
+        case 1:
+          day = "senim";
+          break;
+        case 2:
+          day = "selasa";
+          break;
+        case 3:
+          day = "rabu";
+          break;
+        case 4:
+          day = "kamis";
+          break;
+        case 5:
+          day = "jumat";
+          break;
+        case 6:
+          day = "sabtu";
+          break;
       }
+      switch (new Date().getMonth()) {
+        case 0:
+          month = "january";
+          break;
+        case 1:
+          month = "februari";
+          break;
+        case 2:
+          month = "maret";
+          break;
+        case 3:
+          month = "april";
+          break;
+        case 4:
+          month = "juni";
+          break;
+        case 5:
+          month = "juli";
+          break;
+        case 6:
+          month = "agustus";
+          break;
+        case 7:
+          month = "september";
+          break;
+        case 8:
+          month = "oktober";
+          break;
+        case 9:
+          month = "november";
+          break;
+        case 10:
+          month = "december";
+          break;
+      }
+      document.getElementsByTagName("p")[0].innerText = d.getFullYear()+" "+month+" "+day+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds();
     </script>
   </body>
 </html>
