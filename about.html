@@ -14,8 +14,23 @@
       function bruh(){
         document.getElementsByTagName("p")[0].innerText = "hash: "+window.location.hash+"\nhost: "+window.location.host+"\nhostname: "+window.location.hostname+"\norigin: "+window.location.origin+"\npathname: "+window.location.pathname+"\nport: "+window.location.port+"\nprotocol: "+window.location.protocol+"\nsearch: "+window.location.search;
       }
+      function blah(){
+        var text = "";
+        text += "appcodename: "+navigator.appCodeName;
+        text += "\nappversion: "+navigator.appVersion;
+        text += "\nappname: "+navigator.appName;
+        text += "\ngeolocation: "+navigator.geolocation;
+        text += "\ncookie: "+navigator.cookieEnabled;
+        text += "\nlanguage: "+navigator.language;
+        text += "\nonLine: "+navigator.onLine;
+        text += "\nplatform: "+navigator.platform;
+        text += "\nproduct: "+navigator.product;
+        text += "\nuseragent: "+navigator.userAgent;
+        document.getElementsByTagName("p")[0].innerText = text;
+      }
     </script>
     <button onclick="bruh()">see info</button>
+    <button onclick="blah()">see your info</button>
     <p></p>
   </body>
 </html>

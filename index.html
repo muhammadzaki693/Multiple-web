@@ -6,8 +6,19 @@
     <title>multiple web - index</title>
     <!--me js-->
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+      footer {
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        color: white;
+        background-color: #333;
+      }
+    </style>
   </head>
   <body onload="checkCookie()">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -52,19 +63,25 @@
     </div>
   </div>
 </nav>
-<noscript>your browser is not support javascript or other</noscript>
+<noscript>your browser is not support javascript or other</noscript><br>
 <script async src="https://cse.google.com/cse.js?cx=c5f226f45db0c6b6c"></script>
-<div class="gcse-search"></div>
-<a href="Page/Code.editor.html">code editor</a>
-<iframe src="Page/Code.editor.html" height="500" width="500"></iframe>
-<a href="Page/chat.html">chatbot</a>
-<iframe src="Page/chat.html" height="500" width="500"></iframe>
-<a href="Page/Math.html">math</a>
-<iframe src="Page/Math.html" height="500" width="500"></iframe>
-<a href="Page/Click.html">click</a>
-<iframe src="Page/Click.html" height="500" width="500"></iframe>
-<a href="Page/showdate.html">showdate</a>
-<iframe src="Page/showdate.html" height="500" width="500"></iframe>
+<div class="gcse-search"></div><br>
+<h1>helo iam a <span id="typed"></span></h1>
+<a href="Page/Code.editor.html">code editor</a><br>
+<iframe src="Page/Code.editor.html" height="500" width="500"></iframe><br>
+<a href="Page/chat.html">chatbot</a><br>
+<iframe src="Page/chat.html" height="500" width="500"></iframe><br>
+<a href="Page/Math.html">math</a><br>
+<iframe src="Page/Math.html" height="500" width="500"></iframe><br>
+<a href="Page/Click.html">click</a><br>
+<iframe src="Page/Click.html" height="500" width="500"></iframe><br>
+<a href="Page/showdate.html">showdate</a><br>
+<iframe src="Page/showdate.html" height="500" width="500"></iframe><br>
+<a href="Input.html">input</a><br>
+<iframe src="Input.html" height="500" width="500"></iframe><br>
+<a href="Porfolio.html">porfolio</a><br>
+<iframe src="Porfolio.html" height="500" width="500"></iframe><br>
+<a href="Tes.html">hdbfhd</a>
 <script>
   ;(function () {
     var src = '//cdn.jsdelivr.net/npm/eruda';
@@ -90,6 +107,41 @@
     document.write('<scr'+'ipt src="'+eruda_src_geolocation+'">'+'</scr'+'ipt>')
     document.write('<scr'+'ipt>'+'eruda.add(erudaGeolocation)'+'</scr'+'ipt>')
   })();
+</script>
+<button id="iframesh">show/hide iframe</button>
+<button id="ash">show/hide anchor</button>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p id="copyright"></p>
+    </div>
+  </div>
+</footer>
+<script>
+  var date = new Date()
+  document.getElementById("copyright").innerText = "© "+date.getFullYear();
+</script>
+<script>
+  $(document).ready(function(){
+    $('#iframesh').click(function(){
+      $("iframe").toggle("slow");
+    })
+    $('#ash').click(function(){
+      $('a').toggle("slow")
+    })
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+    $('document').ready(function(){
+        var typed = new Typed('#typed', {
+          cursor: "|",
+          strings: ["developer", "Designer", "gamers"],
+          loop: true,
+          backSpeed: 50,
+          typeSpeed: 50
+        });
+      })
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>

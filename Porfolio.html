@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+      .bg-gray {
+        background-color: gray;
+      }
+      footer {
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        color: white;
+        background-color: #333;
+      }
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+<div class="jumbotron bg-gray text-center">
+  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>muhammadzakirhamadan</title>
+                        <rect width="100%" height="100%" fill="#777" /><text x="40%" y="50%" fill="#777" dy=".3em" style="color:white;">zaki</text>
+                    </svg>
+  <p class="lead">none</p>
+  <hr class="my-4">
+  <p id="typed"></p>
+</div>
+<h2>skils</h2>
+<div class="card">
+  <div class="card-body">
+    <p>front end</p>
+    <ul>
+      <li>html</li>
+      <li>css</li>
+      <li>js</li>
+    </ul>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <p>back end</p>
+    <ul>
+      <li>php</li>
+      <li>nodejs</li>
+    </ul>
+  </div>
+</div>
+<script>
+  var date = new Date()
+  document.getElementById("copyright").innerText = "© "+date.getFullYear();
+</script>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p id="copyright"></p>
+    </div>
+  </div>
+</footer>
+<script>
+  var date = new Date()
+  document.getElementById("copyright").innerText = "© "+date.getFullYear();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+      $('document').ready(function(){
+          var typed = new Typed('#typed', {
+            cursor: "|",
+            strings: ["developer", "designer", "gamer"],
+            loop: true,
+            backSpeed: 30,
+            typeSpeed: 30
+          });
+      })
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
