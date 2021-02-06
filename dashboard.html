@@ -29,8 +29,14 @@
           })
           $("#list").append(listmember)
         })
+        $('button').click(function(){
+          $('table').toggle(3000, function(){
+            alert("table now is hide")
+          })
+        })
       })
     </script>
-    <noscript>your browser is not support javascript or other</noscript>
+    <noscript>your browser is not support javascript or other</noscript><br>
+    <button>hide show table</button>
   </body>
 </html>
