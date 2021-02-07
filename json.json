@@ -1,0 +1,12 @@
+{
+    "type": {
+        "basonn": [true,[],"string",{ "key": "value" },1234,null],
+        "bolean": true,
+        "string": "string",
+        "object": {
+            "key": "value"
+        },
+        "number": 1234,
+        "null": null
+    }
+}
