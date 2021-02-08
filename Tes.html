@@ -39,6 +39,7 @@
 <span id="typed"></span>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <div id="typed-strings">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nam necessitatibus nulla sint architecto vero iste dolores perspiciatis, similique, facilis est itaque unde eaque natus illo, omnis ipsa reprehenderit iure?</p>
     </div>
@@ -51,6 +52,16 @@
             backSpeed: 40,
             typeSpeed: 40
           });
+      })
+    </script>
+    <a data-scroll href="#bazinga">Anchor Link</a>
+    <a data-scroll href="#test">Anchor Link</a>
+    <div id="bazinga">Bazinga!</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a data-scroll href="#test">Anchor Link</a>
+    <div id="test">test!</div>
+    <script>
+      $('document').ready(function(){
+          var scroll = new SmoothScroll('a[href*="#"]');
       })
     </script>
   </body>
