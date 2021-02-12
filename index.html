@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" href="logo.png" type="image/png">
     <style>
       footer {
@@ -18,6 +19,9 @@
         text-align: center;
         color: white;
         background-color: #333;
+      }
+      * {
+        color: default;
       }
     </style>
   </head>
@@ -68,8 +72,9 @@
 <noscript>your browser is not support javascript or other</noscript><br>
 <script async src="https://cse.google.com/cse.js?cx=c5f226f45db0c6b6c"></script>
 <div class="gcse-search"></div><br>
-<a href="#code-editor">code-editor</a> <a href="#chat">chat</a> <a href="#myCanvas">gatau</a>
-<h1>welcome, iam a <span id="typed"></span></h1>
+<a href="#code-editor">code-editor</a> <a href="#chat">chat</a> <a href="#myCanvas">gatau</a><br>
+    <h1 id="h1wel">Hello anonymous!</h1>
+    <h1>welcome to multiple web, iam zaki a <span id="typed"></span></h1>
 <a href="Page/Code.editor.html">code editor</a><br>
 <iframe src="Page/Code.editor.html" height="500" width="500" id="code-editor"></iframe><br>
 <a href="Page/chat.html">chatbot</a><br>
@@ -410,28 +415,6 @@
       ctx.fillStyle = grd;
       ctx.fillRect(10, 10, 150, 80);
     </script>
-    <br>
-    ---localstorage---<br>
-    <input type="text" id="name" placeholder="name"><br>
-    <input type="text" id="password" placeholder="pwd"><br>
-    <button onclick="save()">save</button>
-    <button onclick="get()">get</button>
-    <p id="result"></p>
-    <script>
-      function save(){
-        // Check browser support
-        if (typeof(Storage) !== "undefined") {
-          // Store
-          localStorage.setItem("name", document.getElementById("name").value);
-          localStorage.setItem("pwd", document.getElementById("password").value)
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
-      }
-      function get(){
-        document.getElementById("result").innerText = "name: "+localStorage.getItem("name")+"\npwd: "+localStorage.getItem("pwd");
-      }
-    </script>
   </fieldset>
 </form>
 <script>
@@ -460,6 +443,21 @@
     document.write('<scr'+'ipt>'+'eruda.add(erudaGeolocation)'+'</scr'+'ipt>')
   })();
 </script>
+<p>access logo</p><br>
+<img src="logo.png" alt="logo website" width="90" height="90"><br>
+<img src="Cadangan_logo.jpeg" alt="logo website" width="90" height="90"><br>
+<img src="Cadangan_logo.png" alt="logo website" width="90" height="90"><br>
+<table class="w3-table-all">
+  <tr>
+    <th>edit</th>
+  </tr>
+  <tr>
+    <th>share (credits by zaki edit by you)</th>
+  </tr>
+  <tr>
+    <th>view on your web or other(require credits img original by zaki)</th>
+  </tr>
+</table><br>
 <button id="iframesh">show/hide iframe</button>
 <button id="ash">show/hide anchor</button><br>
 <footer>
