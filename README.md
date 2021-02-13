@@ -8,3 +8,5 @@ Me crazy project ever
 [![em tahlah](https://img.shields.io/badge/subcribe-to%20my%20youtube-brightgreen)](https://m.youtube.com/channel/UCPjmLn2dmWvdLEqBg6HvXOQ)
 <br>
 [![](https://img.shields.io/website?down_color=lightgray&down_message=offline&up_color=lightgreen&up_message=online&url=https%3A%2F%2Fmultiple-web--muhammadzakirha.repl.co)](https://img.shields.io/website?down_color=lightgray&down_message=offline&up_color=lightgreen&up_message=online&url=https%3A%2F%2Fmultiple-web--muhammadzakirha.repl.co)
+<br>
+![GitHub repo size](https://img.shields.io/github/repo-size/muhammadzaki693/Multiple-web)
