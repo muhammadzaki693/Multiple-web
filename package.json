@@ -1,0 +1,30 @@
+{
+  "name": "Multiple-web",
+  "version": "1.0.0",
+  "description": "Me crazy project ever",
+  "main": "script.js",
+  "dependencies": {
+    "eruda": "^2.4.1",
+    "eruda-benchmark": "^2.0.0",
+    "eruda-code": "^2.0.0",
+    "eruda-fps": "^2.0.0",
+    "eruda-geolocation": "^2.0.0",
+    "eruda-orientation": "^2.0.0",
+    "eruda-touches": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadzaki693/Multiple-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammadzaki693/Multiple-web/issues"
+  },
+  "homepage": "https://github.com/muhammadzaki693/Multiple-web#readme"
+}
